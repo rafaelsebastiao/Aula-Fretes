@@ -11,7 +11,6 @@ let radioMasculino = window.document.querySelector("input#masculino")
 
 let radioFeminino = window.document.querySelector("input#feminino")
 
-
 let radioOutro = window.document.querySelector("input#outro")
 
 let checkTecnologia = window.document.querySelector("input#tecnologia")
@@ -47,7 +46,7 @@ const validacaoCPF = (cpf) => {
 
     if(cpf.length == 11){
         for(let i = 0; i < 9; i++){ 
-            numCPF += operador * cpf[i]
+            numCPF += operador * parseInt(cpf[i] )
             operador -= 1
         }
         
@@ -61,21 +60,25 @@ const validacaoCPF = (cpf) => {
         numCPF = 0
         operador = 11
 
-        for(let i = 1; i < 10; i++){
-            numCPF += operador * cpf[i]
+        for (let i = 0; i < 10; i++) {   // <-- começa do 0 e vai até o 9
+            numCPF += operador * parseInt(cpf[i])
             operador -= 1
         }
-
-        if(numCPF < 2){
+        
+        if (numCPF < 2) {
             d11 = 0
-        }else{
+        } else {
             d11 = 11 - (numCPF % 11)
         }
+       
         
+       alert(d10)
+       alert(d11)
        if(cpf[9] != d10 || cpf[10] != d11){
             alert("CPF inválido!")
             return true
        }
+
 
     }else{
         alert("CPF inválido!")
@@ -84,8 +87,6 @@ const validacaoCPF = (cpf) => {
 
     return false
 }
-
-
 
 //Valores
 let nomeCompleto, cpf, email, masculino, feminino, tecnologia, esportes, musica
