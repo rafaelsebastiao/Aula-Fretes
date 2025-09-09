@@ -11,6 +11,9 @@ let radioMasculino = window.document.querySelector("input#masculino")
 
 let radioFeminino = window.document.querySelector("input#feminino")
 
+
+let radioOutro = window.document.querySelector("input#outro")
+
 let checkTecnologia = window.document.querySelector("input#tecnologia")
 
 let checkEsportes = window.document.querySelector("input#esportes")
@@ -20,7 +23,6 @@ let checkMusica = window.document.querySelector("input#musica")
 let selectEstado = window.document.querySelector("select#estado")
 
 let buttonSubmit = window.document.getElementsByTagName("button")[0];
-
 
 
 
