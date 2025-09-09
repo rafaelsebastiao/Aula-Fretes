@@ -72,8 +72,6 @@ const validacaoCPF = (cpf) => {
         }
        
         
-       alert(d10)
-       alert(d11)
        if(cpf[9] != d10 || cpf[10] != d11){
             alert("CPF inválido!")
             return true
