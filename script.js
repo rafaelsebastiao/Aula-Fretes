@@ -60,7 +60,7 @@ const validacaoCPF = (cpf) => {
         numCPF = 0
         operador = 11
 
-        for (let i = 0; i < 10; i++) {   // <-- começa do 0 e vai até o 9
+        for (let i = 0; i < 10; i++) {
             numCPF += operador * parseInt(cpf[i])
             operador -= 1
         }
