@@ -24,6 +24,28 @@ let selectEstado = window.document.querySelector("select#estado")
 let buttonSubmit = window.document.getElementsByTagName("button")[0];
 
 
+//TODO - Relizar validacao de email e validação de senha
+
+
+
+//verificar se o email é válido ou não
+//De caracter especial só pode @ e _
+const validacaoEmail = (emailUsuario) =>{
+    let errosEmail = false
+    let regex = new RegExp(emailUsuario, "\\w")
+
+    n = regex.exec(emailUsuario)
+    alert(n)
+
+    
+}
+
+//verificar senha
+const validacaoSenha = (senha) => {
+
+}
+
+
 
 const verificaEspacos = (nome) =>{
     let quantEspacos = 0;
@@ -92,6 +114,8 @@ let nomeCompleto, cpf, email, masculino, feminino, tecnologia, esportes, musica
 let erros = false
 
 buttonSubmit.addEventListener("click", ()=>{
+    validacaoEmail()
+
     let nomeCompleto = inputNome.value 
     let cpf=inputCPF.value
     let email = inputEmail.value
